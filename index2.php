@@ -17,8 +17,8 @@ if (isset($_POST)) {
 
 if ($succes_flag) {
 
-    require_once('arquivo.xml');
-        $xml = simplexml_load_file('arquivo');
+    require_once('signos.xml');
+        $xml = simplexml_load_file('signos');
         $success = false;
         foreach ($xml->signo as $horoscope) {
             $initial_date = DateTime::createFromFormat('d/m', $horoscope->dataInicio)->format('m/d');
